@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('name_fa')->nullable();
             $table->integer('population');
             $table->float('area');
             $table->json('latlng');
             $table->string('timezones');
+            $table->string('flag_img')->nullable();
             $table->timestamps();
         });
     }

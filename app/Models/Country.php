@@ -11,9 +11,11 @@ class Country extends Model
 
     protected $fillable = [
         'name',
+        'name_fa',
         'population',
         'area',
         'latlng',
-        'timezones'
+        'timezones',
+        'flag_img'
     ];
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>Real-Time Data</title>
@@ -12,10 +12,12 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>population</th>
-        <th>area</th>
-        <th>latlng</th>
-        <th>timezones</th>
+        <th>Name_fa</th>
+        <th>Population</th>
+        <th>Area</th>
+        <th>Latlng</th>
+        <th>Timezones</th>
+        <th>Flag</th>
     </tr>
     </thead>
     <tbody>
@@ -37,7 +39,7 @@
 
                     // Add new rows based on the response
                     response.forEach(function(item) {
-                        var row = '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' + item.population + '</td><td>' + item.area + '</td><td>' + item.latlng + '</td><td>' + item.timezones + '</td></tr>';
+                        var row = '<tr><td>' + item.id + '</td><td>' + item.name + '</td><td>' + item.name_fa + '</td><td>' + item.population + '</td><td>' + item.area + '</td><td>' + item.latlng + '</td><td>' + item.timezones + '</td><td><img src="'+item.flag_img+'"/></td></tr>';
                         $('#dataTable tbody').append(row);
                     });
                 }
